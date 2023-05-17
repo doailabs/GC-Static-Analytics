@@ -45,7 +45,7 @@ function startGCSDKs(clientId) {
 
           myClientApp.alerting.showToastPopup(
             `Hola ${userDetails.name}`,
-            'Bienvenido a Genesys Cloud Enhanced Analytics');
+            'Genesys Cloud Enhanced Analytics');
         })
         .then(() => {
           document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +55,8 @@ function startGCSDKs(clientId) {
           });
 
           console.log('Finished setup.');
-          resolve(platformClient);
+          // Devolver el objeto platformClient cuando se resuelve la promesa
+          resolve(client);
         })
         .catch((err) => {
           console.error("Error during setup:", err);

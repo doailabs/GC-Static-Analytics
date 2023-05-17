@@ -32,7 +32,7 @@
       document.getElementById('saveButton').addEventListener('click', function() {
         let downloadId = document.getElementById('downloadId').value;
         if(platformClient && downloadId) {
-          downloadCSV(downloadId);
+          downloadCSV(platformClient, downloadId);
         }
       });
     });

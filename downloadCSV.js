@@ -1,4 +1,4 @@
-function downloadCSV(downloadId) {
+function downloadCSV(platformClient, downloadId) {
     // Acceder a la API de Genesys Cloud
     const downloadsApi = new platformClient.DownloadsApi();
     

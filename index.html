@@ -4,98 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genesys Cloud & Open AI integration</title>
+  <title>Genesys Cloud Enhanced Analytics</title>
   <script src="https://sdk-cdn.mypurecloud.com/javascript/latest/purecloud-platform-client-v2.min.js"></script>
   <script src="https://sdk-cdn.mypurecloud.com/client-apps/2.6.3/purecloud-client-app-sdk-de77761d.min.js"></script>
-  <script src="globals.js"></script>
   <script src="startGCSDKs.js"></script>
-  <script src="api.js"></script>
-  <script src="dataTable.js"></script>
-  <script src="configurations.js"></script>
-  <script src="ui.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1 id="title">Genesys Cloud & Open AI integration</h1>
+  <h1 id="title">Genesys Cloud Enhanced Analytics</h1>
   <h2>Setup</h2>
-
-  <!-- Subapartado Knowledge base -->
-  <div>
-    <h3>Knowledge base</h3>
-    <button id="getKnowledgeBasesBtn">Get Knowledge Bases</button>
-    <table id="knowledgeBasesTable">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th></th> <!-- Columna vacía para radio buttons -->
-        </tr>
-      </thead>
-      <tbody id="knowledgeBasesTableBody">
-        <!-- Aquí se mostrarán las Knowledge Bases -->
-      </tbody>
-    </table>
-  </div>
-  <!-- Subapartado Configuration -->
-  <div id="configuration" style="display:none;">
-    <h3>Configuration</h3>
-    <form id="configurationForm">
-      <label for="knowledgeBaseId">Knowledge Base ID:</label>
-      <input type="text" id="knowledgeBaseId" size="46" readonly><br>
-
-      <label for="language">Language:</label>
-      <select name="language" id="language">
-        <option value="en-us" selected>English (US)</option>
-        <option value="es-es">Español (España)</option>
-      </select>
-      <br>
-
-      <label for="minAnswerConfidence">Minimum Answer Confidence:</label>
-      <input type="text" id="minAnswerConfidence" value="0.65"><br>
-
-      <label for="systemPrompt">System Prompt:</label>
-      <input type="text" id="systemPrompt" size="150" value="Act as if you were the most expert agent in the customer care center of an airline company, and respond to customers on behalf of that company. Always build your responses guided by the best known answer, that will be provided to you. Provide empathetic, useful and short (maximum 1024 tokens) responses.  Don't include anything in the responses that isn't related to the airline company. Stick strictly to these rules."><br>
-
-      <label for="noMatchBehavior">No Match Behavior:</label>
-      <select name="noMatchBehavior" id="noMatchBehavior">
-        <option value="routeToAgent" selected>Route to agent</option>
-        <option value="disconnect">Disconnect</option>
-      </select>
-      <br>
-  <div style="display: block;">
-    <label for="createKnowledgeArticles">Create Knowledge Articles:</label>
-    <input type="checkbox" id="createKnowledgeArticles">
-  </div>
-
-  <div id="wrapUpIdsDiv" style="display:none;">
-    <label for="wrapUpIds">Wrap-up IDs:</label>
-    <input type="text" id="wrapUpIds" name="wrapUpIds">
-  </div>
-    
-  <div style="display: block;">
-    <label for="model">Model:</label>
-    <select name="model" id="model">
-      <option value="gpt-3.5-turbo" selected>gpt-3.5-turbo</option>
-      <option value="gpt-4">gpt-4</option>
-      <option value=" gpt-4-32k"> gpt-4-32k</option>
-    </select>
-  </div>
-
-  <label for="temperature">Temperature:</label>
-  <input type="text" id="temperature" value="0"><br>
-
-  <label for="maxTokens">Max tokens:</label>
-  <select name="maxTokens" id="maxTokens">
-    <option value="512">512</option>
-    <option value="1024" selected>1024</option>
-    <option value="2048">2048</option>
-  </select>
-  <br>    
-</form>
-<button id="saveConfigurationBtn">Save configuration</button>
-<button id="updateConfigurationBtn" style="display:none;">Update configuration</button>
-  </div>
   <script>
     const clientId = '479255ae-cf23-4c2e-9209-555370df882c';
 

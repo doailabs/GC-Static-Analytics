@@ -21,8 +21,8 @@
     const clientId = '479255ae-cf23-4c2e-9209-555370df882c';
 
     document.addEventListener('DOMContentLoaded', function () {
-      startGCSDKs(clientId).then(() => {
-        downloadCSV();
+      startGCSDKs(clientId).then((platformClient) => {
+        downloadCSV(platformClient);
       });
     });
   </script>

@@ -2,8 +2,12 @@ function downloadCSV(downloadId) {
     // Acceder a la API de Genesys Cloud
     const platformClient = require('platformClient');
     const downloadsApi = new platformClient.DownloadsApi();
+    let opts = { 
+      "issueRedirect": true, // Boolean | 
+      "redirectToAuth": false // Boolean | 
+    };
     
-    downloadsApi.getDownload(downloadId)
+    downloadsApi.getDownload(downloadId, opts)
         .then(response => {
             // Convertir la respuesta a un archivo CSV
             let csvContent = 'data:text/csv;charset=utf-8,' + response;

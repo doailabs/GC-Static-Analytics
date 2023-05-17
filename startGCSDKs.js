@@ -45,7 +45,7 @@ function startGCSDKs(clientId) {
 
           myClientApp.alerting.showToastPopup(
             `Hola ${userDetails.name}`,
-            'Genesys Cloud Enhanced Analytics');
+            'Bienvenido a Genesys Cloud Enhanced Analytics');
         })
         .then(() => {
           document.addEventListener('DOMContentLoaded', () => {

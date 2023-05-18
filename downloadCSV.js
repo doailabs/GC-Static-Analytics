@@ -3,7 +3,7 @@ function downloadCSV(downloadId) {
     const platformClient = require('platformClient');
     const downloadsApi = new platformClient.DownloadsApi();
     let opts = { 
-      "issueRedirect": false, // Boolean | 
+      //"issueRedirect": false, // Boolean | 
       "redirectToAuth": true // Boolean | 
     };
     

@@ -1,6 +1,6 @@
 function downloadCSV(downloadId) {
     // Acceder a la API de Genesys Cloud
-    const platformClient = require("purecloud-platform-client-v2");
+    const platformClient = require('platformClient');
     const downloadsApi = new platformClient.DownloadsApi();
     let opts = { 
       "issueRedirect": false, // Boolean | 

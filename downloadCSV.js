@@ -4,7 +4,7 @@ function downloadCSV(downloadId) {
     const downloadsApi = new platformClient.DownloadsApi();
     let opts = { 
       "issueRedirect": false, // Boolean | 
-      //"redirectToAuth": true // Boolean | 
+      "redirectToAuth": false // Boolean | 
     };
     
     downloadsApi.getDownload(downloadId, opts)

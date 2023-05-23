@@ -6,7 +6,7 @@ function startGCSDKs(clientId) {
     const qParamEnvironment = 'environment';
 
     let language = 'en-us';
-    let redirectUri = 'https://doailabs.github.io/GC-Analytics/';
+    let redirectUri = 'https://doailabs.github.io/GC-Analytics/index.html';
     let userDetails = null;
     let environment = "mypurecloud.de";
 
